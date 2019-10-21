@@ -59,12 +59,14 @@ defmodule Bip39 do
 
   ##### Example
 
-      iex> Bip39.get_words(:english)
-      ["abandon", "ability", "able", "about", "above", "absent", "absorb", ...]
+      iex> Bip39.get_words(:english) |> length()
+      2048
   """
   @spec get_words(atom()) :: list(String.t())
   def get_words(lang) do
-    "priv/#{Atom.to_string(lang)}.txt"
+    :bip39
+    |> :code.priv_dir()
+    |> Path.join("#{Atom.to_string(lang)}.txt")
     |> File.stream!()
     |> Enum.map(&String.trim/1)
   end
