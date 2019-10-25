@@ -33,10 +33,10 @@ defmodule Bip39.MixProject do
     [
       name: :bip39,
       files: ~w(lib priv .formatter.exs mix.exs README* LICENSE*),
-      maintainers: ["Jeonghan-Seok"],
+      maintainers: ["JEONG HAN SEOK"],
       licenses: ["MIT License"],
       links: %{
-        "GitHub" => "https://github.com/Jeonghan-Seok/bip39",
+        "GitHub" => "https://github.com/rudebono/bip39",
         "Docs" => "https://hexdocs.pm/bip39"
       }
     ]
